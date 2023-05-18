@@ -1,6 +1,14 @@
 public class Board {
 
     private int markedCell;
+
+    public Board() {
+    }
+
+    public Board(int markedCell) {
+        this.markedCell = markedCell;
+    }
+
     public String printCurrentState() {
         if(markedCell == 1) {
             return """
@@ -32,9 +40,5 @@ public class Board {
                 +---+---+---+
                 | 7 | 8 | 9 |
                 +---+---+---+""";
-    }
-
-    public void markCell(int cellPosition) {
-        this.markedCell = cellPosition;
     }
 }

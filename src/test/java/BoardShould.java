@@ -23,9 +23,8 @@ public class BoardShould {
 
     @Test
     void print_state_with_first_cell_marked_when_firs_player_marked_one() {
-        Board board = new Board();
+        Board board = new Board(1);
 
-        board.markCell(1);
         String boardState = board.printCurrentState();
 
         String expectedState = """
@@ -41,9 +40,8 @@ public class BoardShould {
 
     @Test
     void print_state_with_second_cell_marked_when_firs_player_marked_two() {
-        Board board = new Board();
+        Board board = new Board(2);
 
-        board.markCell(2);
         String boardState = board.printCurrentState();
 
         String expectedState = """
