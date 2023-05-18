@@ -54,4 +54,21 @@ public class BoardShould {
                 +---+---+---+""";
         assertEquals(expectedState, boardState);
     }
+
+    @Test
+    void print_state_with_third_cell_marked_when_firs_player_marked_three() {
+        Board board = new Board(3);
+
+        String boardState = board.printCurrentState();
+
+        String expectedState = """
+                +---+---+---+
+                | 1 | 2 | X |
+                +---+---+---+
+                | 4 | 5 | 6 |
+                +---+---+---+
+                | 7 | 8 | 9 |
+                +---+---+---+""";
+        assertEquals(expectedState, boardState);
+    }
 }
